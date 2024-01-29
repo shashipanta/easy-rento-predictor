@@ -1,0 +1,12 @@
+total_rooms,total_bedrooms,total_living_rooms,parking,location,electricity,hotwater,terrace,markets,rental_price
+1,0,0,0,Suburb,Yes,1,0,0,6000
+1,0,0,0,Suburb,Yes,0,0,0,5000
+1,0,0,0,Urban,Yes,1,0,0,6500
+1,0,0,0,Urban,Yes,0,0,0,4500
+2,0,0,0,Urban,Yes,1,0,0,9000
+2,0,0,0,Urban,Yes,0,0,0,8000
+2,0,0,0,Suburb,Yes,0,0,0,7000
+2,0,0,0,Suburb,No,1,0,0,7500
+4,0,0,0,Suburb,No,1,0,0,1500
+4,0,0,0,City,No,1,0,0,1600
+4,0,0,0,Suburb,Yes,1,0,0,1000

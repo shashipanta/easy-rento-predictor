@@ -1,0 +1,12 @@
+train model from existing file
+http POST http://127.0.0.1:5000/train_model_from_file file_path="room-training.csv"
+
+# Predict price (edge case)
+http POST http://127.0.0.1:5000/predict_price features:='{   "total_rooms": 4,
+   "total_bedrooms": 0,    "total_living_rooms": 1,    "parking": 1,    "location": "Suburb",    "electricity": "No",    "hotwater": 0,    "terrace": 1,    "markets": 2}'
+
+# correct prediction
+http POST http://127.0.0.1:5000/predict_price features:='{    "total_rooms": 1,    "total_bedrooms": 0,    "total_living_rooms": 1,    "parking": 1,    "location": "Suburb",    "electricity": "Yes",    "hotwater": 0,    "terrace": 0,    "markets": 0}'
+
+# Train model based on few inputs
+http POST http://127.0.0.1:5000/train_model data:='[{"total_rooms": 5, "total_bedrooms": 3, "total_living_rooms": 1, "parking": 1, "location": "Suburb", "electricity": "Yes", "hotwater": 1, "terrace": 0, "markets": 1, "rental_price": 2000}, {"total_rooms": 4, "total_bedrooms": 2, "total_living_rooms": 1, "parking": 1, "location": "Urban", "electricity": "No", "hotwater": 0, "terrace": 1, "markets": 2, "rental_price": 2500}]'
